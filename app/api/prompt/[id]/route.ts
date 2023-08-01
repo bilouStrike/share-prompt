@@ -7,7 +7,8 @@ type ParamsT = {
   };
 };
 
-export const GET = async (request: NextApiRequest, { params }: ParamsT) => {
+// @ts-ignore
+export const GET = async (request, { params }: ParamsT) => {
   try {
     await connectToDB();
 
@@ -20,7 +21,8 @@ export const GET = async (request: NextApiRequest, { params }: ParamsT) => {
   }
 };
 
-export const PATCH = async (request: NextApiRequest, { params }: ParamsT) => {
+// @ts-ignore
+export const PATCH = async (request, { params }: ParamsT) => {
   // @ts-ignore
   const { prompt, tag } = await request.json();
 
@@ -46,7 +48,8 @@ export const PATCH = async (request: NextApiRequest, { params }: ParamsT) => {
   }
 };
 
-export const DELETE = async (request: NextApiRequest, { params }: ParamsT) => {
+// @ts-ignore
+export const DELETE = async (request, { params }: ParamsT) => {
   try {
     await connectToDB();
 
